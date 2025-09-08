@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time 
 
 class UserManagmentPage:
     def __init__(self, browser):
@@ -22,6 +23,9 @@ class UserManagmentPage:
         self.browser.find_element(*self.button_search).click()
     
     def select_role(self):
+        time.sleep(1)
         self.browser.find_element(*self.user_role_select_click).click()
+        time.sleep(1)
         WebDriverWait(self.browser, 5).until(
             EC.element_to_be_clickable(self.user_role)).click()
+        time.sleep(1)
