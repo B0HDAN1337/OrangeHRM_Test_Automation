@@ -13,7 +13,8 @@ class UserManagmentPage:
         self.button_reset = (By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--ghost")
         self.user_role_select_click = (By.XPATH, "(//div[@class='oxd-select-text-input'])[1]" )
         self.user_role = (By.XPATH, "(//div[@role='listbox']//span[text()='Admin'])")
-        
+        self.check_user_name_in_record_found = (By.CSS_SELECTOR, "div.oxd-table-cell.oxd-padding-cell:nth-of-type(2)")
+        self.check_user_role_in_record_found = (By.CSS_SELECTOR, "div.oxd-table-cell.oxd-padding-cell:nth-of-type(3)")
 
     def search_user_by_username(self, username):
         WebDriverWait(self.browser, 5).until(
@@ -29,3 +30,13 @@ class UserManagmentPage:
         WebDriverWait(self.browser, 5).until(
             EC.element_to_be_clickable(self.user_role)).click()
         time.sleep(1)
+
+    def check_username(self):
+        check = WebDriverWait(self.browser, 5).until(
+            EC.visibility_of_element_located(self.check_user_name_in_record_found))
+        return check.text
+    
+    def check_userrole(self):
+        check = WebDriverWait(self.browser, 5).until(
+            EC.visibility_of_element_located(self.check_user_role_in_record_found))
+        return check.text
