@@ -26,3 +26,16 @@ def test_search_user_by_role(logged_in_to_website):
     check_role = user_managment.check_userrole()
     assert "Admin" in check_role
     
+def test_delete_user_by_filter(logged_in_to_website):
+    browser = logged_in_to_website
+    browser.get(link)
+    user_management = UserManagmentPage(browser)
+    user_management.search_user_by_username("TestUserName2")
+    user_management.click_button()
+    check_username = user_management.check_username()
+    assert "TestUserName2" in check_username
+    user_management.click_delete()
+    check_alert = user_management.check_alert_delete()
+    assert WebDriverWait(browser, 5).until(EC.visibility_of(check_alert))
+    user_management.delete_user()
+    assert user_management.success_message(), "Alert doesn't appear"

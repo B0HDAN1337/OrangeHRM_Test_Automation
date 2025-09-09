@@ -13,7 +13,7 @@ def test_add_user_role(logged_in_to_website):
     add_user.select_new_role()
     add_user.click_new_status()
     add_user.select_new_status()
-    add_user.input_hints("manda akhil user")
+    add_user.input_hints("anibal akhil a")
     add_user.input_username("TestUserName2")
     add_user.input_password("Password12345pass")
     add_user.submit()

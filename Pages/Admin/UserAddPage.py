@@ -12,7 +12,7 @@ class UserAddPage:
         self.user_status_click = (By.XPATH, "//label[text()='Status']/../../div/div[@class='oxd-select-wrapper']")
         self.user_status = (By.XPATH, "(//div[@role='listbox']//div[@role='option']//span[text()='Enabled'])")
         self.hints = (By.CSS_SELECTOR, "input[placeholder='Type for hints...']")
-        self.hint_click = (By.XPATH, "(//div[@role='listbox']//span[text()='manda akhil user'])")
+        self.hint_click = (By.XPATH, "(//div[@role='listbox']//span[text()='anibal akhil a'])")
         self.username = (By.XPATH, "//label[text()='Username']/../../div/input[@class='oxd-input oxd-input--active']")
         self.inputs_password = (By.CSS_SELECTOR, "input[type='password']")
         self.button_submit = (By.CSS_SELECTOR, "button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
