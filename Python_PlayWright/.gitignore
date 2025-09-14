@@ -1,0 +1,37 @@
+/venv# Python
+__pycache__/
+__pycache__
+./__pycache__/
+../__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# pytest
+.pytest_cache/
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Selenium / Browser temporary files
+*.crdownload
+*.tmp
