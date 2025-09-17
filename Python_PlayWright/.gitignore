@@ -35,3 +35,6 @@ Thumbs.db
 # Selenium / Browser temporary files
 *.crdownload
 *.tmp
+
+#Storage state(reuse Validation)
+storage_state.json
